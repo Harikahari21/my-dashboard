@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelShop Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/layout.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="brand">
+        <div class="brand-badge">■</div>
+        <span>PixelShop</span>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="#">
+          <i class="fa-solid fa-gauge-high"></i> Dashboard
+        </a>
+        <a href="#"> <i class="fa-solid fa-box-open"></i> Products </a>
+        <a href="#"> <i class="fa-solid fa-user-group"></i> Customers </a>
+        <a href="#"> <i class="fa-solid fa-cart-shopping"></i> Orders </a>
+        <a href="#"> <i class="fa-solid fa-truck"></i> Shipments </a>
+        <a href="#">
+          <i class="fa-solid fa-money-bill-transfer"></i> Transactions
+        </a>
+        <a href="#"> <i class="fa-solid fa-gear"></i> Settings </a>
+        <a href="#"> <i class="fa-solid fa-right-from-bracket"></i> Logout </a>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay"></div>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <div class="left">
+          <button
+            id="menu-btn"
+            class="icon-btn menu-btn"
+            aria-label="Toggle Menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="title">Overview</h1>
+        </div>
+
+        <div class="actions">
+          <div class="search" id="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+
+          <button class="icon-btn" id="search-toggle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <button class="icon-btn">
+            <i class="fa-regular fa-bell"></i>
+          </button>
+
+          <button class="icon-btn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+
+          <div class="avatar">
+            <img src="images/Pass photo.jpg" alt="User Avatar" />
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Cards Grid -->
+
+      <section class="grid-cards">
+        <!-- Card 1 -->
+        <article class="card large">
+          <div class="chart-head">
+            <div class="head-left">
+              <p class="subtle">Total Revenue</p>
+              <p class="revenue">$980,273.00</p>
+            </div>
+            <span class="badge">This Year ▾</span>
+          </div>
+
+          <!-- Chart -->
+          <div class="chart">
+            <div class="bars">
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 40%"></div>
+                <div class="bar bg-primary" style="height: 70%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 50%"></div>
+                <div class="bar bg-primary" style="height: 80%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 30%"></div>
+                <div class="bar bg-primary" style="height: 60%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 45%"></div>
+                <div class="bar bg-primary" style="height: 75%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 35%"></div>
+                <div class="bar bg-primary" style="height: 65%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 50%"></div>
+                <div class="bar bg-primary" style="height: 90%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 40%"></div>
+                <div class="bar bg-primary" style="height: 70%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 55%"></div>
+                <div class="bar bg-primary" style="height: 80%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 45%"></div>
+                <div class="bar bg-primary" style="height: 60%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 35%"></div>
+                <div class="bar bg-primary" style="height: 55%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 50%"></div>
+                <div class="bar bg-primary" style="height: 75%"></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bg-muted" style="height: 60%"></div>
+                <div class="bar bg-primary" style="height: 85%"></div>
+              </div>
+            </div>
+
+            <!-- Month labels -->
+            <div class="months">
+              <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+              <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+              <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <!-- CUSTOMERS CARD -->
+
+        <article class="card customers-card small">
+          <header class="customers-head">
+            <div>
+              <h2>Customers</h2>
+              <span>Info about your customers</span>
+            </div>
+            <i class="fa-solid fa-sliders"></i>
+          </header>
+
+          <div class="gauge-grid">
+            <div class="gauge">
+              <div class="donut" style="--val: 85; --color: var(--accent)">
+                <strong>85%</strong>
+              </div>
+              <div class="subtle">Current Customers</div>
+            </div>
+
+            <div class="gauge">
+              <div class="donut" style="--val: 66; --color: var(--primary)">
+                <strong>66%</strong>
+              </div>
+              <div class="subtle">New Customers</div>
+            </div>
+
+            <div class="gauge">
+              <div class="donut" style="--val: 90; --color: orange">
+                <strong>90%</strong>
+              </div>
+              <div class="subtle">Target Customers</div>
+            </div>
+
+            <div class="gauge">
+              <div class="donut" style="--val: 30; --color: var(--danger)">
+                <strong>30%</strong>
+              </div>
+              <div class="subtle">Recent Customers</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+
+        <article class="card large">
+          <div class="metric-row">
+            <div class="chip">
+              <span
+                class="ico"
+                aria-hidden="true"
+                style="color: #007bff; font-size: 20px"
+              >
+                <i class="fa-solid fa-chart-line"></i>
+              </span>
+              <div><strong>Total Visits</strong><span>10.2m</span></div>
+            </div>
+            <div class="chip">
+              <span
+                class="ico"
+                aria-hidden="true"
+                style="color: #28a745; font-size: 20px"
+              >
+                <i class="fa-solid fa-bag-shopping"></i>
+              </span>
+              <div><strong>Total Orders</strong><span>168k</span></div>
+            </div>
+            <div class="chip">
+              <span
+                class="ico"
+                aria-hidden="true"
+                style="color: #f7a200; font-size: 20px"
+              >
+                <i class="fa-solid fa-dollar-sign"></i>
+              </span>
+              <div><strong>Total Sales</strong><span>$820k</span></div>
+            </div>
+            <div class="chip">
+              <span
+                class="ico"
+                aria-hidden="true"
+                style="color: #dc3545; font-size: 20px"
+              >
+                <i class="fa-solid fa-rotate-left"></i>
+              </span>
+              <div><strong>Returns</strong><span>9.7k</span></div>
+            </div>
+          </div>
+
+          <h3 class="card-title" style="margin-top: 6px">Top Products</h3>
+
+          <div class="products" role="list">
+            <div class="product" role="listitem">
+              <div class="thumb" aria-hidden="true">
+                <img src="images/s21.jpg" alt="Samsung S21" />
+              </div>
+              <div>
+                <strong>Samsung S20 128 GB</strong>
+                <div class="muted">Pink • 36 orders</div>
+              </div>
+              <div class="hello">
+                <div class="muted">Inventory 760</div>
+                <strong>790</strong>
+              </div>
+              <div>
+                <div class="muted">Sale</div>
+                <strong>$1,050.00</strong>
+              </div>
+              <div>
+                <div class="muted">Price</div>
+                <strong>$1,099.00</strong>
+              </div>
+              <div>
+                <div class="muted">Today</div>
+                <strong>18:02</strong>
+              </div>
+            </div>
+
+            <div class="product" role="listitem">
+              <div class="thumb" aria-hidden="true">
+                <img src="images/s20.jpg" alt="Samsung S21" />
+              </div>
+              <div>
+                <strong>Samsung S21 256 GB</strong>
+                <div class="muted">Black • 25 orders</div>
+              </div>
+              <div>
+                <div class="muted">Inventory</div>
+                <strong>290</strong>
+              </div>
+              <div>
+                <div class="muted">Sale</div>
+                <strong>$1,280.00</strong>
+              </div>
+              <div>
+                <div class="muted">Price</div>
+                <strong>$1,399.00</strong>
+              </div>
+              <div>
+                <div class="muted">Today</div>
+                <strong>19:12</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+
+        <article class="card small">
+          <!-- <h3 class="card-title">Stats Overview</h3>
+          <p class="subtle">Information about store visits</p> -->
+          <header class="customers-head">
+            <div>
+              <h2>Stats Overview</h2>
+              <span>Information about store visits</span>
+            </div>
+            <i class="fa-solid fa-sliders"></i>
+          </header>
+
+          <div class="stat">
+            <div class="stat-head"><span>Women</span><span>63%</span></div>
+            <div class="progress"><span style="width: 63%"></span></div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-head"><span>Men</span><span>88%</span></div>
+            <div class="progress red">
+              <span style="width: 88%"></span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-head"><span>Kids</span><span>32%</span></div>
+            <div class="progress purple"><span style="width: 32%"></span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const overlay = document.querySelector(".overlay");
+      const menuBtn = document.getElementById("menu-btn");
+      const searchToggle = document.getElementById("search-toggle");
+      const searchBar = document.getElementById("search-bar");
+
+      // Open sidebar
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sidebar.classList.add("open");
+        overlay.classList.add("show");
+      });
+
+      // Close sidebar and search on outside click
+      document.addEventListener("click", (e) => {
+        if (
+          !sidebar.contains(e.target) &&
+          !menuBtn.contains(e.target) &&
+          sidebar.classList.contains("open")
+        ) {
+          sidebar.classList.remove("open");
+          overlay.classList.remove("show");
+        }
+
+        if (
+          !searchBar.contains(e.target) &&
+          !searchToggle.contains(e.target) &&
+          searchBar.classList.contains("active")
+        ) {
+          searchBar.classList.remove("active");
+        }
+      });
+
+      // Toggle search bar
+      searchToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        searchBar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
