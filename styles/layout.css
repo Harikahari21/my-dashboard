@@ -620,7 +620,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow-x: auto; /* allows horizontal scroll if needed */
+  /* overflow-x: auto; allows horizontal scroll if needed */
   padding-bottom: 6px;
 }
 
@@ -633,7 +633,7 @@ body {
   border: 1px solid var(--ring);
   border-radius: 12px;
   padding: 10px 12px;
-  min-width: 100%; /* ensure it doesn't shrink too small */
+  /* min-width: 100%; ensure it doesn't shrink too small */
 }
 
 .hello {
@@ -676,3 +676,90 @@ body {
     min-width: unset;
   }
 }
+
+/* Responsive adjustments for products */
+@media (max-width: 992px) and (min-width: 601px) {
+  .product {
+    grid-template-columns: 50px 1.2fr 1fr 1fr;
+    grid-auto-rows: auto;
+    row-gap: 10px;
+    column-gap: 12px;
+    padding: 10px;
+  }
+
+  /* Make sure text wraps instead of overlapping */
+  .product strong,
+  .product .muted {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Allow each cell to stretch properly */
+  .product > div {
+    min-width: 0;
+  }
+}
+
+
+/* Stack layout for mobile */
+@media (max-width: 600px) {
+  .products {
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f9fafb;
+    border: 1px solid var(--ring);
+    border-radius: 12px;
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .product > div {
+    width: 100%;
+  }
+
+  .thumb {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f0f1f4, #e5e7eb);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Text scaling for small screens */
+  .product strong {
+    font-size: 13px;
+  }
+
+  .product .muted {
+    font-size: 11px;
+  }
+
+  /* Ensure each section (Inventory, Sale, Price, Today) stays visible */
+  .product > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product > div:first-of-type {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
